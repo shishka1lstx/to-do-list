@@ -21,6 +21,7 @@ function addItem(id){
         let el = new CreateNewItem(inner);
         list.append(el)
         document.getElementById('listHeading').style.display = 'inline';
+        document.getElementById('input').value = '';
     }
     else alert('enter something')
 }

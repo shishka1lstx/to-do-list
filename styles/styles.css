@@ -1,0 +1,162 @@
+
+html, body{
+    font-family: sans-serif;
+    background-color: #e1c9a956;
+    font-size: 18px;
+    
+}
+
+:root{
+    --dark-gray: #4d4e49;
+    --light-gray: #BCC4C7;
+    --bej:#E1C9A9;
+    --light-brown: #A9612B;
+    --dark-brown: #432D2D;
+}
+
+.header{
+    text-align: center;
+    padding-block: 10px;
+    margin-bottom: 100px;
+    
+    background-color: var(--bej);
+    color: var(--dark-brown);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0px 6px 13px 7px #432d2d65;
+}
+
+.header-text{
+    font-size: 38px;
+}
+
+.note{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.note__enter{
+    display: flex;
+    border: 1.5px solid var(--dark-brown);
+    border-radius: 16px;
+    overflow: hidden;
+    align-items: center;
+    padding-left: 10px;
+    width: 300px;
+    
+    margin-bottom: 20px;
+}
+
+.note__input{
+    border: none;
+    background-color: transparent;
+    padding: 4px 10px;
+    font-size: 20px;
+    width: 95%;
+}
+
+.note__input::placeholder{
+    color: var(--dark-brown);
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+.note__input:focus{
+    border:none;
+    outline: none;
+}
+
+.note__input-btn{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:none;
+    border-left:1.5px solid var(--dark-brown);
+    background-color: transparent;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    transition: all 0.3s;
+}
+.note__input-btn svg{
+    width: 65%;
+    transform: rotate(90deg);
+
+}
+
+.note__input-btn path{
+    fill: var(--dark-brown);
+    transition: all 0.2s;
+    
+}
+
+.note__input-btn:hover path{
+    fill: var(--light-brown);
+}
+
+.note__list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+h2 {
+    font-size: 30px;
+    color:var(--dark-brown);
+    align-self: center;
+    display: none;
+
+}
+
+.note__list-item{
+    display: flex;
+    padding: 5px 15px;
+    align-items: center;
+    border: 1px solid var(--dark-brown);
+    border-radius: 16px;
+}
+
+.note__list-checkbox{
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--dark-brown);
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.note__list-checkbox span{
+    display: flex;
+    width: 100%;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.note__list-checkbox span path {
+    fill: #fff;
+}
+
+.note__list-checkbox.checked{
+    background-color: var(--dark-brown);
+}
+
+.note__list-checkbox.checked span{
+    opacity: 1;
+}
+
+.note__list-checkbox.checked  ~ .note__inner{
+    text-decoration:line-through;
+    color: var(--dark-gray)
+}
